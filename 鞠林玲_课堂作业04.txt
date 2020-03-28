@@ -1,0 +1,4 @@
+插入索引：
+利用语句 CREATE INDEX ide_num(索引名）ON student（姓名）；进行添加即可
+插入约束：
+对主键的约束，可以通过在创建表时，加入语句 constraint t_user_id_pk primary key(id) 进行约束。
