@@ -1,0 +1,19 @@
+用户权限控制语句：
+mysql> create user 'test'@'localhost' identified by 'test123';
+Query OK, 0 rows affected (0.04 sec)
+use acquaintance;(一定要选择数据库）
+ grant  SELECT,INSERT,UPDATE,DELETE on acquaintance to 'test'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+初始创建用户并赋予select，insert，update和delete权限。
+注：新版的的mysql版本已经将创建账户和赋予权限的方式分开了。
+修改权限时在后面加with grant option。
+
+
+批处理：
+执行多个SQL语句，如向一个表中插入多个数据：
+select * from test limit 200;
+insert into test select * from test;
+insert into test select * from test;
+
+
+
